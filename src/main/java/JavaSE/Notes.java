@@ -1,7 +1,8 @@
 package JavaSE;
 
-public class Draft {
+public class Notes {
 }
+
 
 
 
@@ -12,26 +13,35 @@ public class Draft {
 
 
 
-main() method & args print and use.
+
+
+Let's analyse each of them:
+1. Text (String): is stream of characters (letters series or letter chain) and symbols.
+2. Computer understand binary language (01000001)
+
+text (as a stream of character `A`) ----  What is happened here? 🤔  ----> binary (01000001)
+
+
+
+It is a character encoding (changing data format) stander.
+It uses 7 bits to represents 128 characters, including uppercase & lowercase letters, numbers, punctuation marks, and
+ control character
 
 
 
 
-Learning Methods:
-        Video lectures?
-        Self-paced online modules?
-        Live cohorts?
-      
-      
-      
+
+
+
+
+
+
 * Java Module:
 
 
 * a. Core Java:-
 
 
-- Java Variables:-
-	- Variable Identifier (variable unique Names & Java Naming conventions).
 
 
 - Java Data Type:
@@ -41,6 +51,14 @@ Learning Methods:
 	- Boolean
 	- characters & ASCII representation.
 	- Non-Primitive types & Wrapper classes: String, Int, Float, Long.. etc.
+	
+	    - primitive stored in stack, reference stored in the stack.
+	    - primitive data stored directly in the Stack, for reference the types the stack holds pointer(reference/address) to the object in heap
+	    - When setting a reference type equal to another reference type variable, a copy of only the pointer is made.
+	    - certain object types can't be manipulated on the heap.
+	    - in reference types: even value is the same, they will point to separate object in the heap.
+	    int [] e = {5, 6, 7, 8}
+	    int [] f = {5, 6, 7, 8}
 
 - Java Type Casting and Type conversion:
 	- Type Casting vs. Type Coercion vs. Type Assertion vs. Type Inference.
@@ -180,7 +198,7 @@ Learning Methods:
             - TreeMap
     - Java Iterator: Iterate Over (Looping Through) Collections
     - Java Wrapper Classes.
-    
+    - Generics & Type Inference
     
 * b. Advanced Java:-
 
@@ -270,7 +288,7 @@ Search on:
     - "Top 10 Security Hacking":  both common attack types and notable hackers. Common attacks include phishing, ransomware, SQL injection, and DDoS attacks. Notable hackers include Kevin Mitnick, Jonathan James, and Albert Gonzalez, among others. Additionally, the OWASP Top Ten identifies critical web application security risks.
     - BE Web Penetration Testing.
 	
-	
+	querydsl
 	
 	
 	
