@@ -17,16 +17,18 @@ package JavaSE;
 public class Session2 {
     public static void main(String[] args) {
         
+        // * --------------------------------------------------------
         // * Declaring, Initializing & Printing Variables:
         /*
          * What is a Java variable?
-         * A container for storing data values
+         * A reusable container for storing data values
          * A name that refers to a memory location
          *
          * Syntax:
          *  1. Declaring: <type> <name>;
          *  2. Initializing: <name> = <value>;
          *  3. Declaring & Initializing: <type> <name> = <value>;
+         * --------------------------------------------------------
          */
         String name; // Declaring (define) Variable:
         // This tells the compiler to reserve memory space for a String variable named `name`.
@@ -68,6 +70,7 @@ public class Session2 {
         System.out.println("-".repeat(20));
         
         /*
+         * --------------------------------------------------------
          * Variable Scope: النطاق
          * Scope defines where a variable can be accessed or used within the program.
          *    🧭 Scope = Where a variable is declared + where it can be accessed (visible) within the code.
@@ -88,6 +91,7 @@ public class Session2 {
           *      Block Scope (e.g., inside loops, if/else)
                     Limited to the {} block where it’s declared
                     Exists only during the execution of that block
+          * --------------------------------------------------------
          */
         class ScopeExample {
             static int classLevel = 100; // Class/Static Scope: Declared with static keyword. Shared among all instances.
@@ -109,21 +113,23 @@ public class Session2 {
         }
         System.out.println("-".repeat(20));
         
+        
         /*
+           * --------------------------------------------------------
           * Java Primitive Data Types
           Simple data stored directly on the memory stack.
             1. Numbers:
-                 a. Integers (byte, short, int, long)
-                 b. Floating-Point (float, double)
+                 a. Integers: Whole Numbers (byte, short, int, long)
+                 b. Floating-Point: Decimal Numbers (float, double)
             2. Boolean (True, False)
             3. char (A, B)
         
          * Java Non-Primitive (Reference/Object) Data Types
          Complex data composed of primitive types & methods inside an object.
-            String
-            Array
             Collection Classes: List, Set, Vector, Stack, Dictionary
             User-Defined Classes/interfaces/enums.
+            Predefined Classes: String, Array, Object, Wrapper Classes
+            * --------------------------------------------------------
          */
         System.out.println("-".repeat(20));
         // 1. Number Types:
@@ -151,7 +157,7 @@ public class Session2 {
         long myLong = Long.MAX_VALUE;
         long myLong2 = 222222222222L; // Capital 'L' or small 'l' indicate java that is a Long value.
         
-        // e. Float size: 4 bytes & precision: ~6-7 digits
+        // e. Float size: 4 bytes & precision: ~6-7 decimal digits
         System.out.println(Float.MAX_VALUE);
         System.out.println(Float.MIN_VALUE);
         System.out.println(Float.MAX_EXPONENT);
@@ -160,33 +166,62 @@ public class Session2 {
 //        float myFloat = 99999999999999999999999999999999999999.14f;
         float myFloat = 0.02f;
         
-        // f. Double size: 8 bytes & precision: ~15 digits
+        // f. Double size: 8 bytes & precision: ~15 decimal digits
         // Use double as the default for decimal numbers.
         System.out.println(Double.MAX_VALUE);
         System.out.println(Double.MIN_VALUE);
         System.out.println(Double.MAX_EXPONENT);
         System.out.println(Double.MIN_EXPONENT);
         System.out.println(Double.MIN_NORMAL);
+        double myDouble = 0.02d;
+        double myDouble2 = 0.02; // without `d` because the double is the default decimal number
+        double price = 19.99;
+        double gpa = 3.8;
+        double temperature = -12.5;
         
+        // Assignment: Search on `BigDecimal`
         
         // 2. Character
         // Represents a single 16-bit Unicode character
         // Declared using single quotes ''
         char grade = 'A'; // Characters are internally stored as numeric Unicode values (e.g., 'A' = 65)
+        char symbol = '!';
+        char currency = '$';
         
         // 3. Boolean 1 bit size
         // Stores only two values: true or false
         // Used for conditions, logic, and flags
         boolean isActive = true;
+        boolean forSale = false;
+        boolean moreThan1000 = (myInteger > 1000); // Expression Treated as a (evaluated to) boolean.
         
-        // Assignment: Search on `BigDecimal`
+        if (forSale) { // condition
+            // do something here
+        }
+        
+        // * Non-Primitive Data Types:
+        // 1. String: Store Text-Based Data
+        String food = "pizza";
+        String emil = "ameen.abozaid@ameenco.org";
         
         
+        // void: void getNumber() {}; This Data type for void methods (method doesn't return any value)
+        
+        
+        // ******* Tricky Points *******
+        // Storing Char in String
+        String firstLetter = "A";
+        // Storing int in String
+        String phone = "+201020304050";
+        // Storing small int into Long variable.
+        long id = 2; // Overkill & Oversize 🤔
+        // Storing int in double
+        double bookPrice = 22; // output: 22.0
         System.out.println("-".repeat(20));
         
         
         /*
-        
+        * --------------------------------------------------------
         * Personal Search: Constants (final) & var Keyword
             A constant is immutable/unchangeable variable -> A variable whose value cannot be changed after it is assigned.
         
@@ -194,6 +229,7 @@ public class Session2 {
             - Improves readability and intent.
             - Prevents accidental changes to critical values.
             - Useful for fixed configuration or magic numbers.
+        * --------------------------------------------------------
          */
         final int MAX_USERS = 100;
         // MAX_USERS = 40; // ❌ Compilation error!
@@ -205,6 +241,7 @@ public class Session2 {
         final int MAX_ATTEMPTS = 3;
         
         /*
+        * --------------------------------------------------------
         * ✅ What is `var`?
             `var` is a `local variable type inference` keyword — the compiler infers/guess the data type based on the
             * value assigned.
@@ -222,14 +259,12 @@ public class Session2 {
             - **Not recommended** when the type is unclear — can reduce readability.
         
         * var can use with anonymous classes
-            
-            *
-        
+         * --------------------------------------------------------
          */
-        var price = 15.99;          // inferred as double
-        var myName = "Amine";       // inferred as String
-        var isAvailable = true;     // inferred as boolean
-        // var data;                // ❌ Error: Cannot use 'var' without initialization
+        var price2 = 15.99;          // inferred as double
+        var myName = "Amine";        // inferred as String
+        var isAvailable = true;      // inferred as boolean
+        // var data;                 // ❌ Error: Cannot use 'var' without initialization
         
         // `var` keyword maks code less verbose:
         // SimpleRemoteStatelessSessionProxyFactoryBean bean = new SimpleRemoteStatelessSessionProxyFactoryBean();
