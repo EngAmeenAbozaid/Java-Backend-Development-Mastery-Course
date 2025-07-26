@@ -1,24 +1,20 @@
 package JavaSE;
 
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Collectors;
+
 public class Playground {
     public static void main(String[] args) {
         
-        
-        // dataType variableName = Value;
-        
-        
-        /// Test Area:
-        byte c = 'C';
-        System.out.println(c);
-        
-        
-        float myFloat = 55.123456789f;
-        System.out.println(myFloat);
-        
-    
+        System.out.println("-".repeat(10));
+        System.out.println("-".repeat(10));
+        System.out.println("-".repeat(10));
         
         
     }
+    
 }
 
 // input data --> Processing () --> Output (Result)
