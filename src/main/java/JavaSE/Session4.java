@@ -106,7 +106,7 @@ public class Session4 {
         // int -> long
         int age = 28;
         long myAge = age; // Implicit/Automatic/Widening Casting
-        Long obj = Long.valueOf(age);
+        Long obj = Long.valueOf(age); // boxing
         
         
         // int to String
@@ -174,7 +174,7 @@ public class Session4 {
         // String -> Int
         String stringifiedNumber = "27";
         int parsedInt = Integer.parseInt(stringifiedNumber);
-        int intNumber = Integer.valueOf(stringifiedNumber);
+        int intNumber = Integer.valueOf(stringifiedNumber); // boxing
         
         // int num1 = Integer.parseInt(str1);
         
