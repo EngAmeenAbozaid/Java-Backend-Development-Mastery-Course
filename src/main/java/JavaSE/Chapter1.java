@@ -20,7 +20,7 @@ package JavaSE;
  */
 
 
-public class Session1 {
+public class Chapter1 {
     /**
      * Java's main() method is the starting point (entry point) from where the JVM starts the execution of a Java program.
      * The main method can contain code to execute or call other methods, and it can be placed in any class that's

@@ -11,7 +11,7 @@ package JavaSE;
  * - Personal Search: Constants (final) & var Keyword
  * - Output Methods: print(), println(), printf()
  */
-public class Session2 {
+public class Chapter2 {
     public static void main(String[] args) {
         
         // * --------------------------------------------------------

@@ -1,8 +1,6 @@
 package JavaSE;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -20,7 +18,7 @@ import java.util.stream.Collectors;
  *<p>
  * Special Characters & Escape Sequences.
  */
-public class Session3 {
+public class Chapter3 {
     public static void main(String[] args) {
         
         /*
@@ -238,12 +236,12 @@ public class Session3 {
         
         // Example: Determine the number of occurrence of the substring "love" and retrieve the index of the 3 rd one
         // if possible
-        System.out.println(Session3.getSearchIndex(sentences, "love", 1));
-        System.out.println(Session3.getSearchIndex(sentences, "love", 2));
-        System.out.println(Session3.getSearchIndex(sentences, "love", 3));
-        System.out.println(Session3.getSearchIndex(sentences, "love", 4));
-        System.out.println(Session3.getSearchIndex(sentences, "programming", 1));
-        System.out.println(Session3.getSearchIndex(sentences, "&", 1));
+        System.out.println(Chapter3.getSearchIndex(sentences, "love", 1));
+        System.out.println(Chapter3.getSearchIndex(sentences, "love", 2));
+        System.out.println(Chapter3.getSearchIndex(sentences, "love", 3));
+        System.out.println(Chapter3.getSearchIndex(sentences, "love", 4));
+        System.out.println(Chapter3.getSearchIndex(sentences, "programming", 1));
+        System.out.println(Chapter3.getSearchIndex(sentences, "&", 1));
         
         // * String Concatenation
         String firstName = "Zahra";
