@@ -4,92 +4,67 @@ import java.util.Arrays;
 
 public class Chapter6 {
     public static void main(String[] args) {
-        System.out.println("-".repeat(10));
-        // Function: reusable named block of code, take data parameters (input) & performing processing & return output.
-        // Method Arguments: list of values passed to the method when calling/invoking it.
-        // Method Parameters: List of input method variables.
-        // Method Signature: the definition of the method (method name & return types & number and types of the
-        // method parameter list).
-        Name:
-        {
-            System.out.println("My Name is Ahmed Ameen");
-            System.out.println("I love Java");
-        } // Named Block of code
+        System.out.println("--".repeat(20));
+        greet();
         
-        int[] prices = {2, 4, 654, 8, 9};
-        maxProfit(prices, 1);
-        maxProfit(prices, 3);
-        maxProfit(prices, 31);
-        maxProfit(prices, 15);
-        maxProfit(prices, 71);
+        // Can i Write method here? So far no.
         
+        // 2. Method Call/Invoke/Execution
+        int result = addNumbers(1, 5);
+        System.out.println("result: " + addNumbers(1, 9));
+        System.out.println("result: " + result);
+        System.out.println("result: " + addNumbers(2, 44, 5));
         
-        String[] students = {"Mohamed", "Salma", "Zahra", "Alaa", "Omar"};
-        getStudentByIndex(students, 1); // call/invoke method
-        getStudentByIndex(students, 2); // call/invoke method
-        getStudentByIndex(students, 4); // call/invoke method
+        int result2 = addNumbers(2, 6, 634, 572, 78, 8);
+        int result3 = addNumbers(2, 6, 8, 10);
+        int result4 = addNumbers(2, 6, 8);
+        System.out.println("result2: " + result2);
+        System.out.println("result2: " + result3);
+        System.out.println("result2: " + result4);
+        // Overloading: multiple method with the same name but different signature (method name + parameter list)
+        // method signature (method name + parameter list) controls the uniqueness of the method.
+        // Recursion: Method that call itself.
         
-        int studentIndex = getStudentIndexByName(students, "Salma");
-        int studentIndex2 = getStudentIndexByName(students, "Omar");
-        System.out.println(studentIndex);
-        System.out.println(studentIndex2);
-        
+        System.out.println("--".repeat(20));
     }
     
-    // Inputs: students & index
-    // Outputs: Name
-    static void getStudentByIndex(String[] students, int index) {
-        System.out.println(students[index - 1]);
+    // 1. Method Definition
+    public static int addNumbers(int n1, int n2) {
+        // Methods take inputs -> Process It -> Return result (Output)
+        System.out.println("Allah with me");
+        if (n1 == 0 & n2 == 0) return 0; // Method used to end the execution earlier.
+        return n1 + n2; // Method can have more than one return statement but with conditionally triggered using
+        // control statements.
     }
     
-    // Input: Students & Student Name
-    // Output: Student Index
-    static int getStudentIndexByName(String[] students, String name) {
-        for (int i = 0; i < students.length; i++) {
-            if (students[i] == name) return i;
+    public static double addNumbers(int n1, double n2) {
+        return (double) n1 + n2;
+    }
+    
+    public static double addNumbers(double n1, int n2) {
+        return n1 + n2;
+    }
+    
+    public static int addNumbers(int... numbers) {
+        System.out.println(Arrays.toString(numbers));
+        // Receive multiple values using VarAgrs -> Array of parameters
+        int result = 0;
+        // loop on the array & accumulate values (+=).
+        for (int number : numbers) {
+            result += number;
         }
-        return 0;
+        // Return the addition result
+        return result;
     }
     
-    public static int maxProfit(int[] prices, int fee) {
-        // Write your code here
-        int n = prices.length;
-        int lowestStockPrice = Integer.MAX_VALUE;
-        int hightestStockPrice = 0;
-        int maxProfit = 0;
-        for (int price : prices) {
-            if (price > hightestStockPrice) hightestStockPrice = price;
-            if (price < lowestStockPrice) lowestStockPrice = price;
-            
-            int profit = 0;
-            for (int i = 1; i <= 12; i++) {
-                profit = price - i;
-                if (profit > maxProfit) maxProfit = profit;
-            }
-            System.out.println(Arrays.toString(prices));
-            System.out.println(hightestStockPrice);
-            System.out.println(lowestStockPrice);
-            System.out.println(n);
-            System.out.println(maxProfit);
-            
-            
-        }
-        if (maxProfit == 0) return lowestStockPrice;
-        else return maxProfit;
+    public static int addNumbers(int n1, int n2, int n3) {
+        return n1 + n2 + n3;
     }
     
-    public static double maxProfit(int[] prices, double fee) {
-        return 0.0;
-    }
-    
-    double maxProfit(double prices) {
-        // Do logic Here
-        return 0.0;
-    }
-    
-    String myMethod(int parameter) {
-        // inputest
-        // Processing
-        return "Ahmed"; // outputs
+    // Method without input or output
+    public static void greet() {
+        System.out.println("Hello World! I am Ameen"); // Method body
+        // int x = addNumbers(2,3); // You can reuse the method form anywhere
+        return; // return used to ends the method execution
     }
 }
