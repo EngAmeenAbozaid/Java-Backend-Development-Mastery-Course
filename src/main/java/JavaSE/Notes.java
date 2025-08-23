@@ -11,28 +11,11 @@ public class Notes {
 /*
 ------------- Draft Area -------------
 
+divide the course into modules -> chapters -> lessons
 
+Agile methodology
 
-
-
-Let's analyse each of them:
-1. Text (String): is stream of characters (letters series or letter chain) and symbols.
-2. Computer understand binary language (01000001)
-
-text (as a stream of character `A`) ----  What is happened here? 🤔  ----> binary (01000001)
-
-
-
-It is a character encoding (changing data format) stander.
-It uses 7 bits to represents 128 characters, including uppercase & lowercase letters, numbers, punctuation marks, and
- control character
-
-
-
-
-
-
-
+soap vs rest
 
 
 
@@ -41,67 +24,19 @@ It uses 7 bits to represents 128 characters, including uppercase & lowercase let
 
 * a. Core Java:-
 
+Introduce Local Variable -> CTL + Alt + V
+Suggestions -> ctl + space
 
 
-
-- Java Data Type:
-	- Primitive vs Reference Data Types.
-	- Primitive Data Types: byte -> short -> int -> long -> float -> double   Boolean, and char
-	- Java Numbers: integer & floating point (decimal)
-	- Boolean
-	- characters & ASCII representation.
-	- Non-Primitive types & Wrapper classes: String, Int, Float, Long.. etc.
-	
-	    - primitive stored in stack, reference stored in the stack.
-	    - primitive data stored directly in the Stack, for reference the types the stack holds pointer(reference/address) to the object in heap
-	    - When setting a reference type equal to another reference type variable, a copy of only the pointer is made.
-	    - certain object types can't be manipulated on the heap.
-	    - in reference types: even value is the same, they will point to separate object in the heap.
-	    int [] e = {5, 6, 7, 8}
-	    int [] f = {5, 6, 7, 8}
-
-- Java Type Casting and Type conversion:
-	- Type Casting vs. Type Coercion vs. Type Assertion vs. Type Inference.
-	- Java Type Casting: Widening Casting (automatically/ Implicitly) & Narrowing Casting (manually/explicitly)
-	-
-
-- Java Operators
-	- Java divides the operators into the following groups:
-	- Arithmetic operators
-	- Assignment operators
-	- Comparison operators
-	- Logical operators
-	- Bitwise operators
-	
-- Java String
-	- String builtin Reference Data Type.
-	- String Methods: length(), toUpperCase(), toLowerCase(), indexOf()
-	- String Concatenation: + operator, concat();
-	- Adding Number + String.
-	- Special Characters: Escape sequences
-	- String Formatting: printf()
-	
- 
-- Java Boolean
-    - Concept: yes/no operation
-    - binary representation (0,1)
+Static Utility Methods:
+    Static Method of Arrays, String, List
+    Arrays.deepToString()
+    List.of() --> preferred when only one element passed
+    Arrays.asList() --> and the rest methods of the Arrays class
+    Collections.sort(); --> and the rest methods of the Collection class
     
-	
-- Java Conditions (Control Statements):
-    - Conditional Operator Review
-    - if
-    - if else
-    - Short hand if: ternary operator
-    - Switch Case: case, break default
-    
-- Java Looping and Iteration:
-    - While Loop
-    - Do wile loop
-    - For loop
-    - Nested loops
-    - For-Each loop
-    - Stream.forEach(), Stream.map()
-    - Break/Continue.
+    Collections.sort() vs listElement.sort(String::compareTo)
+    Collections.sort() vs listElement.sort(String::compareToIgnoreCase)
 	
 - Java Methods (Functions):
     - Main method: main()
@@ -237,6 +172,7 @@ It uses 7 bits to represents 128 characters, including uppercase & lowercase let
         - Read File
         - Write File (Scanner)
         - Java Delete File/Folder.
+        - Project: KVM Add Role ID & Add new Role Entries.
         
         
         
@@ -269,6 +205,38 @@ It uses 7 bits to represents 128 characters, including uppercase & lowercase let
     - Square Root.
     - Random Number.
 
+
+
+1. Java Programming
+  Strong understanding of Java 8+ features (Streams, Lambdas, Optionals).
+   Object-Oriented Programming (OOP), exception handling, collections, and multithreading.
+ 2. Spring Framework
+   Spring Core (IoC, Dependency Injection)
+   Spring Boot (auto-configuration, starter dependencies, actuator)
+   Spring MVC (RESTful APIs, controllers, validation)
+   Spring Data JPA (Repositories, Entity relationships, HQL/JPQL)
+   Spring Security (authentication, authorization, JWT, OAuth2)
+   
+3. Database
+   Relational: MySQL, PostgreSQL
+   ORM: Hibernate / JPA
+  
+4. API Design
+   RESTful API development
+   JSON/XML serialization
+   Swagger/OpenAPI documentation
+Frontend (Angular)
+   TypeScript
+   Angular CLI (creating components, services, modules)
+   Components & Templates (data binding, event handling)
+   Directives & Pipes
+   Services & Dependency Injection
+   Routing & Navigation (Route guards, lazy loading)
+   Forms (Reactive Forms & Template-driven)
+   HTTP Client (GET, POST, error handling)
+   State Management (RxJS, Observables, optionally NgRx)
+  Angular Material or Bootstrap for UI components
+  Responsive Design using CSS Flexbox/Grid
 
 
 

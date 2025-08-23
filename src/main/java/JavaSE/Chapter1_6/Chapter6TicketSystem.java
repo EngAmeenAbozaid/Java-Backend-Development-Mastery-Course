@@ -1,4 +1,4 @@
-package JavaSE;
+package JavaSE.Chapter1_6;
 
 public class Chapter6TicketSystem {
     // attributes/variables
